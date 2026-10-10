@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dinkers Court | Pickleball Court Booking</title>
+<style>
+:root{--bg:#07172f;--card:#0d2547;--line:#1d3d6b;--text:#eef4ff;--mute:#9db3d6;--accent:#c6f432;--accent-ink:#07172f;--err:#ff8a8a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f8ff;--card:#fff;--line:#cfdcf2;--text:#0b1f3f;--mute:#4d6286;--accent:#1c5bd8;--accent-ink:#fff;--err:#b3261e}}
+:root[data-theme="dark"]{--bg:#07172f;--card:#0d2547;--line:#1d3d6b;--text:#eef4ff;--mute:#9db3d6;--accent:#c6f432;--accent-ink:#07172f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-weight:900;font-size:1.25rem;letter-spacing:.02em}
+.logo span{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:800;border:0;border-radius:999px;padding:13px 26px;font-size:1rem;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--text);border:2px solid var(--line)}
+.hero{padding:48px 0 56px}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:.85rem;color:var(--mute);margin-bottom:18px}
+h1{font-size:clamp(2.4rem,8vw,4.6rem);line-height:1.02;margin:0 0 16px;font-weight:900}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{color:var(--mute);max-width:520px;font-size:1.1rem;margin:0 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:0 0 56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card small{color:var(--mute);text-transform:uppercase;letter-spacing:.08em;font-size:.72rem}
+.card strong{display:block;font-size:1.5rem;margin-top:4px}
+h2{font-size:clamp(1.6rem,5vw,2.2rem);margin:0 0 8px}
+.sub{color:var(--mute);margin:0 0 24px}
+section{padding:8px 0 56px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.ph{aspect-ratio:4/3;border-radius:14px;border:1px dashed var(--line);display:grid;place-items:center;color:var(--mute);font-size:.9rem;background:repeating-linear-gradient(45deg,transparent 0 12px,rgba(127,160,220,.07) 12px 24px)}
+.card h3{margin:12px 0 2px;font-size:1.05rem}
+.card p{margin:0;color:var(--mute);font-size:.95rem}
+form{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.full{grid-column:1/-1}
+label{display:grid;gap:6px;font-size:.88rem;color:var(--mute);font-weight:600}
+input,select,textarea{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.total{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.total b{font-size:1.6rem}
+.note{font-size:.85rem;color:var(--mute)}
+.err{color:var(--err);font-size:.9rem;min-height:1.2em}
+#result{display:none}
+#result pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit;margin:12px 0}
+.policy{display:grid;gap:10px;color:var(--mute);font-size:.95rem}
+.policy b{color:var(--text)}
+footer{border-top:1px solid var(--line);padding:26px 0 36px;color:var(--mute);font-size:.9rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo">DINKERS<span>.</span>COURT</div><a class="btn" href="#book">Book a court</a></header>
+
+<div class="hero">
+<span class="tag">🏓 Now booking · Court 1</span>
+<h1>Show up.<br><em>Dink.</em> Repeat.</h1>
+<p class="lead">A friendly pickleball court where beginners and regulars play side by side. Grab your paddle, call your friends, we have the court ready.</p>
+<div class="cta"><a class="btn" href="#book">Request a booking</a><a class="btn ghost" href="#space">See the space</a></div>
+</div>
+
+<div class="stats">
+<div class="card"><small>Rate</small><strong>₱250 / hour</strong></div>
+<div class="card"><small>Open daily</small><strong>3 PM – 12 AM</strong></div>
+<div class="card"><small>Courts</small><strong>1 (more soon)</strong></div>
+<div class="card"><small>Find us</small><strong style="font-size:1.05rem">Uhaw, Brgy. Fatima</strong></div>
+</div>
+
+<section id="space">
+<h2>Made for good games.</h2>
+<p class="sub">Photos coming soon. These are placeholders for your own pictures.</p>
+<div class="grid3">
+<div class="card"><div class="ph">Court photo</div><h3>The court</h3><p>Smooth surface, good lighting, room to play.</p></div>
+<div class="card"><div class="ph">Player area photo</div><h3>Player area</h3><p>Rest, hydrate, and cheer on the next game.</p></div>
+<div class="card"><div class="ph">Event photo</div><h3>Open play nights</h3><p>All skill levels welcome. Everyone gets a game.</p></div>
+</div>
+</section>
+
+<section id="book">
+<h2>Request a booking</h2>
+<p class="sub">Send us your preferred time. We will confirm with you by message.</p>
+<div class="card">
+<form id="f" novalidate>
+<label>Your nickname<input id="name" placeholder="e.g. Ace" autocomplete="nickname"></label>
+<label>Contact number<input id="phone" type="tel" placeholder="09XX XXX XXXX" autocomplete="tel"></label>
+<label>Date<input id="date" type="date"></label>
+<label>Start time<select id="start"></select></label>
+<label>Hours<select id="hours"><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+<label>Players (optional)<select id="players"><option value="">Not sure</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+<label class="full">Notes (optional)<textarea id="notes" rows="2" placeholder="Anything we should know?"></textarea></label>
+<div class="full total"><div><small class="note">Estimated total</small><br><b id="total">₱250</b></div><button class="btn" type="submit">Create booking request</button></div>
+<div class="full err" id="err" role="alert"></div>
+</form>
+</div>
+
+<div class="card" id="result" style="margin-top:14px">
+<strong>Almost done! Send this message to us:</strong>
+<pre id="msg"></pre>
+<div class="cta"><button class="btn" id="copy" type="button">Copy message</button><a class="btn ghost" href="#" id="fb">Open Messenger (add your link)</a></div>
+<p class="note">Your booking is not confirmed until we reply. Payment is verified manually.</p>
+</div>
+</section>
+
+<section>
+<h2>House rules</h2>
+<p class="sub">Sample policy. Edit this to match your own.</p>
+<div class="card policy">
+<div><b>Cancellation:</b> Cancel at least 72 hours before your slot to request a refund.</div>
+<div><b>Rebooking:</b> Allowed once, if requested at least 48 hours before your slot.</div>
+<div><b>Rain:</b> If rain stops play, rebook another slot or request a refund.</div>
+</div>
+</section>
+
+<footer>
+<div><b style="color:var(--text)">Dinkers Court</b><br>Uhaw, Brgy. Fatima, 11-C Blk 6</div>
+<div>Call: 09XX XXX XXXX<br>Facebook: your page link here</div>
+</footer>
+</div>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var RATE=250,OPEN=15,CLOSE=24;
+/* Paste from Supabase > Project Settings > API (Project URL and anon public key). Leave empty for demo mode. */
+var SUPABASE_URL="",SUPABASE_KEY="";
+var LIVE=!!(SUPABASE_URL&&SUPABASE_KEY);
+function rpc(fn,body){return fetch(SUPABASE_URL+"/rest/v1/rpc/"+fn,{method:"POST",headers:{"Content-Type":"application/json",apikey:SUPABASE_KEY,Authorization:"Bearer "+SUPABASE_KEY},body:JSON.stringify(body)}).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.message||"Request failed");return j})})}
+var taken={};
+function fmt(h){var s=h%24,ap=s>=12&&s<24?"PM":"AM",x=s%12||12;return x+":00 "+ap}
+var st=$("start");
+for(var h=OPEN;h<CLOSE;h++){var o=document.createElement("option");o.value=h;o.textContent=fmt(h);st.appendChild(o)}
+var d=new Date(),pad=function(n){return String(n).padStart(2,"0")};
+var today=d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+$("date").min=today;$("date").value=today;
+function total(){$("total").textContent="₱"+(RATE*Number($("hours").value)).toLocaleString()}
+function applySlots(){
+var n=Number($("hours").value);
+Array.prototype.forEach.call(st.options,function(o){
+var h=Number(o.value),bad=h+n>CLOSE;
+for(var i=h;i<h+n;i++){if(taken[i])bad=true}
+o.disabled=bad;o.textContent=fmt(h)+(taken[h]?" (booked)":"");
+});
+if(st.selectedOptions[0]&&st.selectedOptions[0].disabled){for(var j=0;j<st.options.length;j++){if(!st.options[j].disabled){st.selectedIndex=j;break}}}
+}
+function refreshSlots(){
+if(!LIVE){applySlots();return}
+rpc("get_taken_slots",{p_from:$("date").value,p_to:$("date").value}).then(function(rows){taken={};rows.forEach(function(r){taken[r.hour]=1});applySlots()}).catch(applySlots);
+}
+$("hours").addEventListener("change",function(){total();applySlots()});
+$("date").addEventListener("change",refreshSlots);
+total();refreshSlots();
+var text="";
+$("f").addEventListener("submit",function(e){
+e.preventDefault();
+var n=$("name").value.trim(),p=$("phone").value.trim(),dt=$("date").value,s=Number($("start").value),hrs=Number($("hours").value);
+if(!n||!p||!dt){$("err").textContent="Please add your nickname, contact number and date.";return}
+if(s+hrs>CLOSE){$("err").textContent="That runs past closing time (12 AM). Pick an earlier start or fewer hours.";return}
+$("err").textContent="";
+var pretty=new Date(dt+"T00:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"});
+text="Hi Dinkers Court! I'd like to book Court 1.\n"+
+"Name: "+n+"\nContact: "+p+"\nDate: "+pretty+"\nTime: "+fmt(s)+" to "+fmt(s+hrs)+" ("+hrs+" hr"+(hrs>1?"s":"")+")\n"+
+($("players").value?"Players: "+$("players").value+"\n":"")+
+"Total: ₱"+(RATE*hrs).toLocaleString()+($("notes").value.trim()?"\nNotes: "+$("notes").value.trim():"");
+var btn=$("f").querySelector("button[type=submit]");
+function show(code){if(code)text="Booking code: "+code+"\n"+text;$("msg").textContent=text;$("result").style.display="block";$("result").scrollIntoView({behavior:"smooth",block:"center"})}
+if(!LIVE){show();return}
+btn.disabled=true;btn.textContent="Sending...";
+rpc("request_booking",{p_nickname:n,p_phone:p,p_date:dt,p_start:s,p_hours:hrs,p_players:$("players").value||null,p_notes:$("notes").value.trim()||null})
+.then(function(code){show(code);refreshSlots()})
+.catch(function(er){$("err").textContent=er.message==="SLOT_TAKEN"?"Sorry, that time was just taken. Please pick another.":"Could not send your request. Please try again or message us.";refreshSlots()})
+.then(function(){btn.disabled=false;btn.textContent="Create booking request"});
+});
+$("copy").addEventListener("click",function(){
+var b=this;
+function ok(){b.textContent="Copied!";setTimeout(function(){b.textContent="Copy message"},1800)}
+try{navigator.clipboard.writeText(text).then(ok,function(){fallback()})}catch(e){fallback()}
+function fallback(){var r=document.createRange();r.selectNode($("msg"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected. Press copy."}
+});
+$("fb").addEventListener("click",function(e){e.preventDefault()});
+})();
+</script>
+</body>
+</html>
